@@ -4,6 +4,8 @@ const Hero = () => {
   return (
     <div className='hero'>
         <h1>ADRISH MITRA</h1>
+        <p>Computer Science Student, Freelancer, Web Developer</p>
+        <div className="scroll-down"></div>
     </div>
   )
 }

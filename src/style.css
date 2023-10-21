@@ -4,8 +4,8 @@
 :root{
     --bg: #18152f;
     --bg-light: #66347F;
-    --secondary: #9E4784;
-    --main: #eb8686;
+    --secondary: #754791;
+    --main: #d79ff8;
 }
 
 *{
@@ -21,7 +21,7 @@ body{
 
 a{
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--secondary);
 }
 
@@ -32,20 +32,23 @@ ul{
 }
 
 .nav li{
-    margin-right: 1.5rem;
+    margin-right: 3rem;
 }
 
 .nav a{
     transition: all ease 0.25s;
     font-weight: 300;
+    font-family: 'Trispace', sans-serif;
 }
 
 .nav a:hover{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: var(--main);
 }
 
 .nav{
+    z-index: 8;
+    position: relative;
     display: flex;
     width: 100vw;
     justify-content: center;
@@ -54,28 +57,46 @@ ul{
 }
 
 .hero{
-    background-image: url('./Assets/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
+    z-index: 8;
     display: flex;
+    flex-direction: column;
     width: 100vw;
-    height: 75vh;
     justify-content: center;
     align-items: center;
+    flex: 1;
+    margin-bottom: 5rem;
 }
 
-.hero::after{
-    content: "";
-    width: 100vw;
-    height: 75vh;
-    position: absolute;
-    background: #0000001f;
+.hero p{
+    font-size: 1.2rem;
+    color: #ffffffcb;
+    font-family: 'Trispace', sans-serif;
+    margin-top: 1.5rem;
 }
+
 
 .hero h1{
-    z-index: 8;
     font-size: 7rem;
     font-weight: 900;
     color: var(--main);
+    opacity: 0.8;
     text-shadow: 8px 8px 10px #00000020;
+}
+
+.landing{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url('./Assets/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.landing::after{
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000c4;
 }
