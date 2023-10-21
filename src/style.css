@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root{
+    --bg: #18152f;
+    --bg-light: #66347F;
+    --secondary: #9E4784;
+    --main: #eb8686;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg);
+    color: var(--secondary);
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--secondary);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.nav li{
+    margin-right: 1.5rem;
+}
+
+.nav a{
+    transition: all ease 0.25s;
+    font-weight: 300;
+}
+
+.nav a:hover{
+    font-size: 1.3rem;
+    color: var(--main);
+}
+
+.nav{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    padding: 2.5rem;
+    max-height: 100px;
+}
+
+.hero{
+    background-image: url('./Assets/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    width: 100vw;
+    height: 75vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero::after{
+    content: "";
+    width: 100vw;
+    height: 75vh;
+    position: absolute;
+    background: #0000001f;
+}
+
+.hero h1{
+    z-index: 8;
+    font-size: 7rem;
+    font-weight: 900;
+    color: var(--main);
+    text-shadow: 8px 8px 10px #00000020;
+}
