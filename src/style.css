@@ -5,7 +5,7 @@
 :root{
     --bg: #17141d;
     --bg-light: #3f374f;
-    --secondary: #754791;
+    --secondary: #8957a9;
     --main: #d79ff8;
 }
 
@@ -331,12 +331,16 @@ ul{
 
 .work{
     position: relative;
-    height: 100vh;
+    
     display: flex;
     padding: 3rem;
     flex-direction: column;
     align-items: center;
     background-image: url(./Assets/sky-purple.jpg);
+}
+
+.work::after{
+    height: 100%;
 }
 
 .work>h1, .work>div{
@@ -373,4 +377,103 @@ ul{
 .selected{
     color: var(--main);
     font-weight: 300;
+}
+
+.work-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.work-card-container{
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    flex-basis: 500px;
+}
+
+.work-card{
+    width: 600px;
+    height: 400p;
+    margin: 1rem;
+    margin-bottom: 2rem;
+    background-color:#3f374f6b;
+    backdrop-filter: blur(5px);
+    border-radius: 24px;
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.work-card-img-container{
+    position: relative;
+    border-radius: 16px;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.work-card img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 0 0;
+    transition: all ease 0.5s;
+}
+.default-img{
+    opacity: 0.4;
+    filter: blur(1px);
+    top: unset;
+    left: unset;
+    transform: unset;
+}
+.work-card:hover .work-card-img-container>img{
+    scale: 1.1;
+}
+
+.work-card:hover .work-card-img-container>.default-img{
+    scale: 1;   
+}
+
+.work-card:hover >p{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.work-card p{
+    text-align: end;
+    position: absolute;
+    bottom: 45px;
+    right: 40px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--secondary);
+    font-size: 1rem;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all ease 0.2s;
+}
+
+
+.work-card h2{
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    
+}
+
+.work-card a{
+    font-family: 'Trispace';
+    font-size: 0.8rem;
+    transition: all ease 0.25s;
+}
+
+.work-card a:hover{
+    color: var(--main);
+    font-size: 0.9rem;
 }
