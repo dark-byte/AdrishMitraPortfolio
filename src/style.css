@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Trispace:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
-    --bg: #18152f;
-    --bg-light: #66347F;
+    --bg: #17141d;
+    --bg-light: #3f374f;
     --secondary: #754791;
     --main: #d79ff8;
 }
@@ -14,9 +15,14 @@
 }
 
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
-    color: var(--secondary);
+    color: #fff;
+    scroll-snap-type: y mandatory;
+}
+
+.snap-container{
+    scroll-snap-align: start;
 }
 
 a{
@@ -33,6 +39,10 @@ ul{
 
 .nav li{
     margin-right: 3rem;
+}
+
+.nav li:last-child{
+    margin-right: 0;
 }
 
 .nav a{
@@ -56,6 +66,30 @@ ul{
     max-height: 100px;
 }
 
+.floating-nav{
+    z-index: 88;
+    height: 60px;
+    position: fixed;
+    padding: 1rem;
+    transform: translateY(-60px);
+    top: 0;
+    background: #17141db9;
+    backdrop-filter: blur(8px);
+    transition: transform ease 0.5s;
+}
+
+.show-nav{
+    transform: translateY(0px);
+}
+
+.floating-nav a{
+    font-size: 0.8rem;
+}
+
+.floating-nav a:hover{
+    font-size: 0.9rem;
+}
+
 .hero{
     z-index: 8;
     display: flex;
@@ -64,14 +98,24 @@ ul{
     justify-content: center;
     align-items: center;
     flex: 1;
+    min-height: 500px;
     margin-bottom: 5rem;
 }
 
 .hero p{
     font-size: 1.2rem;
+    max-width: fit-content;
     color: #ffffffcb;
     font-family: 'Trispace', sans-serif;
     margin-top: 1.5rem;
+    overflow: hidden; 
+    border-right: .15em solid var(--main); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 4.5s steps(50, end),
+      blink-caret .5s step-end infinite;
 }
 
 
@@ -83,14 +127,33 @@ ul{
     text-shadow: 8px 8px 10px #00000020;
 }
 
+.hero-highlight{
+    font-weight: 100;
+    font-family: 'Trispace';
+}
+
 .landing{
     display: flex;
     position: relative;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('./Assets/hero-bg.jpg');
     background-size: cover;
     background-position: center;
+}
+  
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
 }
 
 .landing::after{
@@ -99,4 +162,215 @@ ul{
     height: 100vh;
     width: 100vw;
     background-color: #000000c4;
+}
+
+.landing::before{
+    z-index: 5;
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200vw;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .2s infinite;
+    opacity: .9;
+    visibility: visible;
+}
+
+
+@keyframes typing {
+    from { width: 0 }
+    to { width:  100%}
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--main) }
+}
+
+.skills{
+    position: relative;
+    padding: 5rem;
+    height: 100vh;
+    background-image: url('./Assets/skills-bg.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.skills-content{
+    position: relative;
+    z-index: 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.skills::after, .work::after{
+    backdrop-filter: blur(3px);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #17141dec;
+}
+
+.skills-content h1, .work h1{
+    font-size: 3rem;
+    margin-top: 3rem;
+    font-weight: 900;
+}
+
+.skills-container{
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 200px;
+}
+
+.skill-box{
+    width: 350px;
+    height: 370px;
+    border: 5px solid var(--bg-light);
+    margin-right: -5px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    align-items: center;
+}
+
+.skill-box-top{
+    width: 75%;
+}
+
+.skill-icon{
+    font-size: 3rem;
+    margin-right: 1rem;
+    transform: translateY(8%);
+}
+
+
+.skill-box-top-content{
+    position: relative;
+    margin-top: 2.5rem;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: Trispace, monospace, sans-serif ;
+    margin-left: 1.5rem;
+    color: #ffffffc1;
+}
+
+.skill-box-top-content::after{
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: -1.8rem;
+    height: 90%;
+    border: 1px solid var(--bg-light);
+}
+
+.skill-box-top-content p::before, .skill-box-top-content p::after{
+    
+    color: var(--bg-light);
+    font-size: 0.8rem;
+    position: absolute;
+    
+}
+
+.skill-box-top-content p::before{
+    content: "<p>";
+    top: -1.5rem;
+    left: -2.5rem;
+}
+
+.skill-box-top-content p::after{
+    content: "</p>";
+    bottom: -1.5rem;
+    left: -2.5rem;
+}
+
+.skill-box-top h2{
+    position: relative;
+}
+
+.skill-highlight{
+    color: var(--main);
+    font-weight: bold;
+}
+
+
+.icons-array{
+    display: flex;
+    width: 100vw;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    background-color: var(--bg-light);
+}
+
+.icons-item{
+    position: relative;
+    z-index: 8;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--main);
+}
+
+
+.work{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    padding: 3rem;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(./Assets/sky-purple.jpg);
+}
+
+.work>h1, .work>div{
+    z-index: 8;
+}
+
+.work h1{
+    margin-bottom: 2rem;
+}
+
+.work-container h3{
+    font-size: 1rem;
+    font-weight: 100;
+    font-family: 'Trispace';
+}
+
+.all{
+    margin-left: 10px;
+}
+
+.filter-options{
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.filter-options:hover{
+    color: #ffffffcf;
+}
+
+.selected:hover{
+    color: var(--main);
+}
+
+.selected{
+    color: var(--main);
+    font-weight: 300;
 }

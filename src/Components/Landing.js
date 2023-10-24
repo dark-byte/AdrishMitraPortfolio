@@ -4,7 +4,7 @@ import Nav from './Nav'
 
 const Landing = () => {
   return (
-    <div className='landing'>
+    <div className='landing snap-container' id='landing'>
       <Nav/>
       <Hero/>
     </div>
