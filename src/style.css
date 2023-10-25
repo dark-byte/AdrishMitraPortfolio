@@ -512,12 +512,13 @@ ul{
 .edu-card{
     display: flex;
     width: 700px;
+    z-index: 14;
+    position: relative;
     justify-content: space-between;
     background-color: var(--bg-light);
     padding: 1.5rem;
     cursor: pointer;
     border-radius: 5px;
-    margin-bottom: 1rem;
     transition: all ease 0.25s;
 }
 
@@ -540,11 +541,12 @@ ul{
 }
 
 .edu-card-info{
-    display: none;
+    position: relative;
+    z-index: 5;
+    opacity: 0;
     background-color: #3f374f5b;
-    padding: 2rem;
     max-width: 700px;
-    margin-bottom: 1rem;
+    max-height: 0px;
     transition: all ease 0.5s;
 }
 
@@ -556,10 +558,7 @@ ul{
     margin-bottom: 0.7rem;
 }
 
-.edu-card-info p{
-    max-width: 90%;
-}
-
 .edu-view{
-    display: block;
+    opacity: 1;
+    max-height: 200px;
 }
