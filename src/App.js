@@ -1,3 +1,4 @@
+import Education from './Components/Education';
 import FLoatingNav from './Components/FloatingNav';
 import Icons from './Components/Icons';
 import Landing from './Components/Landing';
@@ -13,6 +14,7 @@ function App() {
       <Skills/>
       <Icons/>
       <Work/>
+      <Education/>
     </div>
   );
 }

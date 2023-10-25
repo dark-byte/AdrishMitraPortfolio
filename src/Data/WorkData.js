@@ -17,7 +17,7 @@ const works = [
     },
 
     {
-        title : 'Cureazzy',
+        title : 'Cureazzy - Startup Website',
         img : `${Cureazzy}`,
         category : 'web',
         link : 'https://profound-lily-baf58c.netlify.app/'

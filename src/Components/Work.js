@@ -37,12 +37,12 @@ const Work = () => {
                 <div key={item.title} className="work-card">
                   <div className="work-card-img-container">
                     {item.img ? 
-                        <img src={item.img} alt="" /> :
-                        <img className='default-img' src={icon}></img>
+                        <img src={item.img} alt={item.title} /> :
+                        <img className='default-img' src={icon} alt={item.title}></img>
                     }
                   </div>
                   <h2>{item.title}</h2>
-                  <a href={item.link}>View Project <BsArrowRight style={{transform: 'translateY(3px)'}}/></a>
+                  <a href={item.link} target='_blank' rel='noreferrer'>View Project <BsArrowRight style={{transform: 'translateY(3px)'}}/></a>
                   <p>{item.category}</p>
                 </div>
               )

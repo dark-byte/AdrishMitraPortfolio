@@ -8,8 +8,8 @@ const Nav = () => {
           <li><a href="#landing">// home</a></li>
           <li><a href="#skills-container">// skills</a></li>
           <li><a href="#work">// work</a></li>
-          <li><a href="#">// education</a></li>
-          <li><a href="#">// contact</a></li>
+          <li><a href="#education">// education</a></li>
+          <li><a href="#contact">// contact</a></li>
         </ul>
         </div>
     </div>

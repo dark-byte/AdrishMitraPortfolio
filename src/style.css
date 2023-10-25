@@ -212,7 +212,7 @@ ul{
 
 }
 
-.skills::after, .work::after{
+.skills::after, .work::after, .education::after{
     backdrop-filter: blur(3px);
     content: "";
     position: absolute;
@@ -223,7 +223,7 @@ ul{
     background: #17141dec;
 }
 
-.skills-content h1, .work h1{
+.skills-content h1, .work h1, .education h1{
     font-size: 3rem;
     margin-top: 3rem;
     font-weight: 900;
@@ -405,6 +405,7 @@ ul{
     border-radius: 24px;
     padding: 2rem;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.131) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .work-card-img-container{
@@ -413,6 +414,7 @@ ul{
     height: 300px;
     width: 100%;
     overflow: hidden;
+    
 }
 
 .work-card img{
@@ -476,4 +478,88 @@ ul{
 .work-card a:hover{
     color: var(--main);
     font-size: 0.9rem;
+}
+
+.work-card h2, .work-card a{
+    margin-left: .5rem;
+}
+
+.education{
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./Assets/Education-bg.jpg');
+}
+
+.education::after{
+    height: 100%;
+}
+
+.education>div, .education>h1{
+    z-index: 9;
+}
+
+.education h1{
+    margin-top: 8rem;
+}
+
+.edu-card-container{
+    margin-top: 5rem;
+}
+
+.edu-card{
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
+    background-color: var(--bg-light);
+    padding: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    transition: all ease 0.25s;
+}
+
+.edu-card:hover{
+    background-color: #443b57;
+}
+
+.edu-card-highlight{
+    background-color: var(--secondary);
+}
+
+.edu-card-highlight:hover{
+    background-color: var(--secondary);
+}
+
+.edu-icon{
+    margin-left: 1rem;
+    transform: translateY(4px);
+    font-size: 1.4rem;
+}
+
+.edu-card-info{
+    display: none;
+    background-color: #3f374f5b;
+    padding: 2rem;
+    max-width: 700px;
+    margin-bottom: 1rem;
+    transition: all ease 0.5s;
+}
+
+.edu-card-info h3{
+    font-size: 1rem;
+    font-family: 'Trispace', monospace, sans-serif;
+    font-weight: 100;
+    color: var(--main);
+    margin-bottom: 0.7rem;
+}
+
+.edu-card-info p{
+    max-width: 90%;
+}
+
+.edu-view{
+    display: block;
 }
