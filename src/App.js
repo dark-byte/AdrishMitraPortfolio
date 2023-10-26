@@ -1,3 +1,4 @@
+import Contact from './Components/Contact';
 import Education from './Components/Education';
 import FLoatingNav from './Components/FloatingNav';
 import Icons from './Components/Icons';
@@ -15,6 +16,7 @@ function App() {
       <Icons/>
       <Work/>
       <Education/>
+      <Contact/>
     </div>
   );
 }

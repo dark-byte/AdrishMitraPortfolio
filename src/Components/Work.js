@@ -34,7 +34,7 @@ const Work = () => {
           {
             workslist.map(item =>{
               return(
-                <div key={item.title} className="work-card">
+                <div key={item.title} className="work-card" onClick={()=> window.open(item.link, '_blank')}>
                   <div className="work-card-img-container">
                     {item.img ? 
                         <img src={item.img} alt={item.title} /> :
