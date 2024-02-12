@@ -1,6 +1,6 @@
 import React from 'react'
 import {HiDownload} from 'react-icons/hi'
-import resume from '../Assets/Adrish_Mitra_Resume23-Masked.pdf'
+import resume from '../Assets/WorkAssets/Adrish-Resume-24.pdf'
 
 const Hero = () => {
   return (
