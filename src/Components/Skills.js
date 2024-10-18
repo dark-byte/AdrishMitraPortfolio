@@ -17,7 +17,7 @@ const Skills = () => {
                             <h2>Full Stack Web <br></br> Development</h2>
                         </div>
                         <div className="skill-box-top-content">
-                            <p>Experienced in Full Stack development, specializing in the <span className='skill-highlight'>MERN</span> Stack, with focus on <span className='skill-highlight'> React, NodeJS, ExpressJS, and MongoDB</span>, accumulating over 3+ years of expertise in these technologies.</p>
+                            <p>Skilled in full stack development with a focus on the <span className='skill-highlight'>MERN stack</span>, I bring 3+ years of expertise in building<span className='skill-highlight'> responsive web applications</span> using MERN, ensuring seamless user experiences.</p>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@ const Skills = () => {
                             <h2>Python App <br></br> Development</h2>
                         </div>
                         <div className="skill-box-top-content">
-                            <p>Possessing over 4+ years of hands-on experience in crafting Python-based <span className='skill-highlight'>bots and web scrapers</span>, I have a proven track record of developing numerous <span className='skill-highlight'> automation projects and applications.</span></p>
+                            <p>With 4+ years of experience in Python development, I have a strong background in creating<span className='skill-highlight'> bots, web scrapers, and automation tools</span>, delivering efficient and reliable solutions.</p>
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@ const Skills = () => {
                             <h2>Software <br></br>Development</h2>
                         </div>
                         <div className="skill-box-top-content">
-                            <p>I have acquired a comprehensive understanding of <span className='skill-highlight'>Data Structures, Algorithms, and Object-Oriented Programming </span>principles during my engineering education.</p>
+                            <p>Throughout my engineering journey, I have developed a solid grasp of<span className='skill-highlight'> Data Structures, Algorithms, OOP, Cloud Computing and Machine Learning</span> allowing me to build efficient software systems.</p>
                         </div>
                     </div>
                 </div>

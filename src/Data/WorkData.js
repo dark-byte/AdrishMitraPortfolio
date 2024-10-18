@@ -7,8 +7,34 @@ import Omega from '../Assets/WorkAssets/Omega.png'
 import Over from '../Assets/WorkAssets/Over.png'
 import Todo from '../Assets/WorkAssets/Todo-React.png'
 import Video from '../Assets/WorkAssets/Video-Editing.png'
+import Heliverse from '../Assets/WorkAssets/heliverse.png'
+import webtoon from '../Assets/WorkAssets/webtoon.png'
 
 const works = [
+    {
+        title: 'In-Memory Key-Value Store (Redis)',
+        img: '',
+        category: 'python',
+        link: 'https://github.com/dark-byte/redis-clone-PY'
+    },
+    {
+        title: 'Distributed Web Link Crawling Tool',
+        img: '',
+        category: 'python',
+        link: 'https://github.com/dark-byte/Web-Crawler'
+    },
+    {
+        title: 'Heliverse Internship Assignment',
+        img: `${Heliverse}`,
+        category: 'python',
+        link: 'https://github.com/dark-byte/Heliverse_Assignment'
+    },
+    {
+        title: 'Webtoon Cloud Computing Intern Assignment',
+        img: `${webtoon}`,
+        category: 'python',
+        link: 'https://github.com/dark-byte/webtoon-cloud-assignment'
+    },
     {
         title: 'File Sorting and Organization App',
         img: '',
@@ -110,7 +136,8 @@ const works = [
         img: '',
         category: 'python',
         link: 'https://github.com/dark-byte/A.Z.M.A'
-    }
+    },
+    
 
 ]
 
