@@ -26,13 +26,13 @@ const works = [
     {
         title: 'Heliverse Internship Assignment',
         img: `${Heliverse}`,
-        category: 'python',
+        category: 'web',
         link: 'https://github.com/dark-byte/Heliverse_Assignment'
     },
     {
         title: 'Webtoon Cloud Computing Intern Assignment',
         img: `${webtoon}`,
-        category: 'python',
+        category: 'cloud',
         link: 'https://github.com/dark-byte/webtoon-cloud-assignment'
     },
     {

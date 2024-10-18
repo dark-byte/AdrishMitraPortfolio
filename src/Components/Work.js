@@ -27,7 +27,8 @@ const Work = () => {
           <span onClick={()=> filterList('all')} className={`${ selected === 'all' ? 'selected' : ''} filter-options all`} id='filter-all'> All</span>/ 
           <span onClick={()=> filterList('web')} className={`${ selected === 'web' ? 'selected' : ''} filter-options`} id='filter-web'> Web Development</span>/
           <span onClick={()=> filterList('python')} className={`${ selected === 'python' ? 'selected' : ''} filter-options`} id='filter-python'> Python</span>/
-          <span onClick={()=> filterList('java')} className={`${ selected === 'java' ? 'selected' : ''} filter-options`} id='filter-java'> Java</span>
+          <span onClick={()=> filterList('java')} className={`${ selected === 'java' ? 'selected' : ''} filter-options`} id='filter-java'> Java</span>/
+          <span onClick={()=> filterList('cloud')} className={`${ selected === 'cloud' ? 'selected' : ''} filter-options`} id='filter-cloud'> Cloud</span>
         </h3>
 
         <div className="work-card-container">
