@@ -9,6 +9,7 @@ import Todo from '../Assets/WorkAssets/Todo-React.png'
 import Video from '../Assets/WorkAssets/Video-Editing.png'
 import Heliverse from '../Assets/WorkAssets/heliverse.png'
 import webtoon from '../Assets/WorkAssets/webtoon.png'
+import email from '../Assets/WorkAssets/email_reply.png'
 
 const works = [
     {
@@ -16,6 +17,12 @@ const works = [
         img: '',
         category: 'python',
         link: 'https://github.com/dark-byte/redis-clone-PY'
+    },
+    {
+        title: 'Intelligent Email Classifier and Auto-Responder',
+        img: `${email}`,
+        category: 'web',
+        link: 'https://github.com/dark-byte/ReachInbox-Email-Response/'
     },
     {
         title: 'Distributed Web Link Crawling Tool',
