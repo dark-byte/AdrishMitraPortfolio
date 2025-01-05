@@ -10,8 +10,28 @@ import Video from '../Assets/WorkAssets/Video-Editing.png'
 import Heliverse from '../Assets/WorkAssets/heliverse.png'
 import webtoon from '../Assets/WorkAssets/webtoon.png'
 import email from '../Assets/WorkAssets/email_reply.png'
+import cobaltChatbot from '../Assets/WorkAssets/cobalt-docs-chatbot.png'
+import iotSecurity from '../Assets/WorkAssets/iot_security.jpeg'
 
 const works = [
+    {
+        title: "Cobalt-Docs Chatbot",
+        img: `${cobaltChatbot}`,
+        category: 'python',
+        link: "https://cobalt-docs-chatbot.onrender.com/"
+    },
+    {
+        title: 'IOT Security System using blockchain',
+        img: `${iotSecurity}`,
+        category: 'python',
+        link: 'https://github.com/dark-byte/IOT_security_blockchain'
+    },
+    {
+        title: 'Library Management Backend',
+        img: '',
+        category: 'web',
+        link: 'https://github.com/dark-byte/Library_Management_Backend'
+    },
     {
         title: 'In-Memory Key-Value Store (Redis)',
         img: '',
